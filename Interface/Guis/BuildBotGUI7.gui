@@ -1,0 +1,116 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BuildBotgui7) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "263 173";
+      extent = "256 128";
+      minExtent = "8 2";
+      visible = "1";
+      command = "canvas.popdialog(buildbotgui7);";
+      accelerator = "escape";
+      text = "BuildBot Duplicator GUI";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popdialog(buildbotgui7);";
+
+      new GuiTextEditCtrl(buildbot_dupinput) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 68";
+         extent = "188 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "108 90";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_clickdupsave();";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "0 255 0 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 90";
+         extent = "96 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popdialog(buildbotgui7);";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiMLTextCtrl() {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "212 66";
+         extent = "25 20";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "<font:impact:20>.bls";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+      };
+      new GuiMLTextCtrl() {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "32 32";
+         extent = "192 28";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "<just:center>Please enter the filepath you would like to save this duplication to.";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

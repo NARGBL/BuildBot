@@ -1,0 +1,106 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(buildbotgui2) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "32 32";
+      extent = "216 100";
+      minExtent = "8 2";
+      visible = "1";
+      command = "togbuildbotgui(1);";
+      accelerator = "escape";
+      text = "Load In Progress";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popdialog(buildbotgui2);";
+
+      new GuiBitmapButtonCtrl(buildbot_pause) {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 60";
+         extent = "90 32";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_togpause();";
+         text = "Pause Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "116 60";
+         extent = "90 32";
+         minExtent = "8 2";
+         visible = "1";
+         command = "messageboxyesno(\"Warning!\", \"Are you sure you want to terminate the load?\", \"buildbot_stoploadsequence();\", \"\");";
+         text = "Stop Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 0 0 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "106 3";
+         extent = "46 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.pushdialog(buildbotgui3);";
+         text = "Options";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/button1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiMLTextCtrl(buildbot_info) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 29";
+         extent = "199 14";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = " ";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

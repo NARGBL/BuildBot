@@ -1,0 +1,124 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(buildbotgui4) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "64 64";
+      extent = "294 259";
+      minExtent = "8 2";
+      visible = "1";
+      command = "canvas.popdialog(buildbotgui4);";
+      accelerator = "escape";
+      text = "BuildBot Help";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popdialog(buildbotgui4);";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "3 26";
+         extent = "72 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_helpabout();";
+         text = "About";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/tab1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "75 26";
+         extent = "72 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_helpinterface();";
+         text = "Interface";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/tab1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "147 26";
+         extent = "72 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_helploading();";
+         text = "Loading";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/tab1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "BlockButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "219 26";
+         extent = "72 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "buildbot_helpduplicating();";
+         text = "Duplicating";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "base/client/ui/tab1";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+      };
+      new GuiMLTextCtrl(buildbot_help) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 54";
+         extent = "278 14";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         maxBitmapHeight = "-1";
+         selectable = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
